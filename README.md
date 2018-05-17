@@ -19,8 +19,12 @@ In this case, a middleware can help to bridge the gap.
 
 This project is basically such a middleware.
 
-# How it works
+## How it works
 
 Please consult the [README](middleware/README.md) for details. In short, it makes
 clever use of Node's event emitter system. It does not require any queue. The
 middleware is horizontally scalable, infinitely.
+
+## Components
+1. The `backend` directory has the backend.
+2. The `middleware` directory has the middleware that does the magic.
