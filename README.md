@@ -21,6 +21,6 @@ This project is basically such a middleware.
 
 # How it works
 
-Please consult the [middleware/README.md] for details. In short, it makes clever use
-of Node's event emitter system. It does not require any queue. The middleware is
-horizontally scalable, infinitely.
+Please consult the [README](middleware/README.md) for details. In short, it makes
+clever use of Node's event emitter system. It does not require any queue. The
+middleware is horizontally scalable, infinitely.
