@@ -1,7 +1,7 @@
 # PoC for Middleware
 
 This is a PoC for a middleware that turns an asynchronous process into a synchronous one. It accepts a request with a
-parameter, sends it to CPS (core backend), waits for the reply, then sends back the reply
+parameter, sends it to the backend, waits for the reply, then sends back the reply
 to the client.
 
 The crucial part in this is waiting without blocking any thread, process or taking any
@@ -68,7 +68,7 @@ $ PORT=4001 node app.js
 
 ### Multiple instances
 
-How will multiple instances work? Simple, we are sending the replyUrl to the backend. The backend (CPS) will send
+How will multiple instances work? Simple, we are sending the `replyUrl` to the backend. The backend will send
 the reply request to that URL, which is the URL of the instance that sent the request.
 
 ## No need for Redis or other queues
