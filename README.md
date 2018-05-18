@@ -28,3 +28,41 @@ middleware is horizontally scalable, infinitely.
 ## Components
 1. The `backend` directory has the backend.
 2. The `middleware` directory has the middleware that does the magic.
+
+## Easy startup
+
+You can quickly start the demo with `pm2`. A `pm2` config file is provided,
+named `ecosystem.config.js`. It starts the backend and two instances of
+the middleware on ports 4000 and 40001.
+
+If pm2 is not already installed, install `pm2` in your
+machine globally like this:
+
+```sh
+npm install pm2 -g
+```
+
+Then from this directory, run:
+
+```sh
+pm2 start ecosystem.config.js
+```
+
+To see the logs:
+
+```sh
+pm2 logs
+```
+
+See the processes:
+
+```sh
+pm2 ls
+```
+
+To shutdown:
+
+```sh
+pm2 stop all    # stop all
+pm2 kill        # shutdown the pm2 daemon as well
+```
